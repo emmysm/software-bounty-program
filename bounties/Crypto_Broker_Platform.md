@@ -12,529 +12,529 @@ The Fermat book chapters related to this bounty can be found here:[Chapter 16 - 
 
 ## Scope
 
-Segun lo acordado el 100% de Bounty para el proyecto CBP y sus Side Proyects se dividiran en dos versiones. La **Version 1**  representa el **70% del Bounty** y tantos sus features como criterios de aceptacion estan descritos en este documento; la **Version 2** representa el otro **30% del Bounty** y tantos sus features como criterios de aceptacion estan descritos en [este otro documento](https://github.com/Fermat-ORG/software-bounty-program/blob/master/bounties/Crypto_Broker_Platform_V2.md)
+As it was agreed on 100% of the Bounty for the CBP project and its Side Projects will be divided into two versions. The **1st Version** represents **70% of the Bounty** and its features as well as its acceptance criteria are described in this document; the **2nd Version** represents the other **30% of the Bounty** and its features as well as its acceptance criteria are described in [this other document](https://github.com/Fermat-ORG/software-bounty-program/blob/master/bounties/Crypto_Broker_Platform_V2.md)
 
 ### CBP Platform
 
-La plataforma contara con las siguientes caracteristicas, apoyandose , cada una de ellas tiene una serie de Crterios de Aceptacion asi como componentes involucrados:
+The platform will have the following characteristics, relying on, each one of them has a series of Acceptance Criteria as well as involved components:
 
-#### Creacion de identidades para Crypto Brokers
+#### Identities Creation for Crypto Brokers
 
-Criterios de Aceptacion:
-- Se debe poder crear una broker identity
-- Se debe poder editar la informacion de una broker identity
-- Se debe poder publicar y despublicar una broker identity en la red Fermat
+Acceptance Criteria:
+- We must create a broker identity
+- We must be able to edit the information of a broker identity
+- We must be able to post and delete a broker identity on the Fermat network
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Broker Identity Subapp
-- Crypto Broker Identity Plugin
+- Crypto Broker Identity Plug-in
 
-#### Creacion de identidades para Crypto Customer
+#### Creation of identities for Crypto Customers
 
-Criterios de Aceptacion:
-- Se debe poder crear una Customer identity
-- Se debe poder editar la informacion de una customer identity
+Acceptance Criteria:
+- We must be able to create a Customer identity
+- We must be able to edit the information of a customer identity
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Identity Subapp
-- Crypto Customer Identity Plugin
+- Crypto Customer Identity Plug-in
 
-#### Configuracion Previa (Wizard) de la Broker Reference Wallet
+#### Previous Configuration (Wizard) of the Broker Reference Wallet
 
-Criterios de Aceptacion:
-- Asociar una identidad a la Wallet
-- Asociar al menos dos wallets a la Broker Wallet para definir las monedas que estas manejan como mercancia
-  - Estas wallets pueden ser: Cash Money Wallet, Bank Money Wallet o Bitcoin Wallet
-  - En el caso de la Bank wallet se debe seleccionar la cuenta bancaria a utilizar
-- Seleccionar las wallets a donde van a ir dirigidas las ganancias de los diferentes pares de mercancia que un broker puede negociar
-- Seleccionar proveedores de tasas de cambio para los diferentes pares de mercancia que un broker puede negociar
-- Configurar el spread y si va a realizar restock automatico al momento de recibir un pago
+Acceptance Criteria:
+- Link an identity to the wallet
+- Link at least two wallets to the Broker Wallet to define the type of currency they use as merchandise
+  - These wallets can be: Cash Money Wallet, Bank Money Wallet or Bitcoin Wallet
+  - When referring to the Bank wallet the bank account to be used must be selected
+- Select the wallets to where the earnings of the different pairs of merchandise that a broker can negotiate upon will be sent
+- Select exchange rate providers the different pairs of merchandise that a broker can negotiate upon
+- Configure the spread and if you are going to do an automatic restock at the moment of receiving a payment
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Broker Reference Wallet
-- Crypto Broker Wallet Plugin
-- Matching Engine Plugin
+- Crypto Broker Wallet Plug-in
+- Matching Engine Plug-in
 
-#### Configuracion Previa (Wizard) de la Customer Reference Wallet
+#### Previous configuration (Wizard) of the Customer Reference Wallet
 
-Criterios de Aceptacion:
-- Asociar una identidad a la Wallet
-- Asociar una Bitcoin Wallet para que pueda pagar con Bitcoin
-- Seleccionar proveedores de tasas de cambio para los diferentes pares de mercancia que un customer desee comprar
-- Agregar y Eliminar una Locacion donde recibirá la mercancia que desee comprar
-- Agregar y Eliminar una Cuenta Bancaria donde recibirá la mercancia que desee comprar
+Acceptance Criteria:
+- Link an identity to the wallet
+- Link a Bitcoin Wallet in order to be able to pay in Bitcoin
+- Select exchange rate providers for the different pairs of merchandise that a customer would want to buy
+- Add and Delete a location where you will receive the merchandise you would want to buy
+- Add and Delete a bank account where you will receive the merchandise you would want to buy
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
-- Customer Broker Purchase Negotiation Plugin
+- Customer Broker Purchase Negotiation Plug-in
 
-#### Configurar la Broker Wallet
+#### Configure the Broker Wallet
 
-Criterios de Aceptacion:
-- Agregar y Eliminar una locacion
-- Agregar y Eliminar una cuenta bancaria
-- Agregar Mercancia (Hacer Restock) a la Broker wallet
-- Retirar Mercancia (Hacer Destock) en la Broker wallet
-- Actualizar el Spread y el Restock automatico
+Acceptance Criteria:
+- Add and Delete a location
+- Add and delete a bank account
+- Add merchandise (do Restock) to the Broker wallet
+- Remove merchandise (do Destock) in the Broker wallet
+- Update the Spread and the automatic Restock
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Broker Reference Wallet
-- Crypto Broker Wallet Plugin
-- Customer Broker Sale Negotiation Plugin
+- Crypto Broker Wallet Plug-in
+- Customer Broker Sale Negotiation Plug-in
 
-#### Configurar la Customer Wallet
+#### Configure the Customer Wallet
 
-Criterios de Aceptacion:
-- Agregar y Eliminar una locacion
-- Agregar y Eliminar una cuenta bancaria
-- Agregar y Eliminar un Proveedor de Tasas de Cambio
+Acceptance Criteria:
+- Add and delete a location
+- Add and Delete a bank account
+- Add and Delete an exchange rate provider
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Broker Reference Wallet
-- Crypto Broker Wallet Plugin
-- Customer Broker Sale Negotiation Plugin
+- Crypto Broker Wallet Plug-in
+- Customer Broker Sale Negotiation Plug-in
 
-#### Conectar un Crypto Customer con un Crypto Broker
+#### Connect a Crypto Customer with a Crypto Broker
 
-Criterios de Aceptacion:
-- Visualizar Customers conectados en la red Fermat
-- Visualizar Brokers disponibles (visibles) en la red Fermat
-- Un Customer puede enviar una solicitud de conexion a un Broker
-- Un Broker debe recibir una notifiacion de conexion por parte de un Customer
-- Un Broker puede aceptar la solicitud de conexion de un Customer
-- Un Customer debe recibir la notificacion de que el broker aceptó la Solicitud
+Acceptance Criteria:
+- View Customers connected to the fermat network
+- View available Brokers (visible) on the fermat network
+- A Customer can send a connection request to a Broker
+- A Broker must receive a notification of connection from a Customer
+- A Broker can accept a connection request from a Customer
+- A Customer must receive the notification that the Broker accepted the request
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Broker Community Subapp
 - Crypto Customer Community Subapp
 - Customer Actor Network Service
 - Broker Actor Network Service
 
-#### Obtener cotizaciones de un Broker
+#### Obtain exchange rate from a Broker
 
-Se muestra en la Customer Wallet una lista con las diferentes mercancias que ofrecen los brokers con los que esta conectado un customer
-- Por cada item de la lista se debe mostrar una sublista con las diferentes cotizaciones que ofrece el broker para la mercancia que esta vendiendo
-- Esta cotizacion puede ser el precio del mercado o el precio de la ultima venta
-- Estas cotizaciones se actualizan una vez al dia
+A list is shown on the Customer Wallet of the different types of merchandise the brokers offer to the customers connected
+- For each item on the list there must be a sub list with the different exchange rates offered by the broker for the merchandise he is selling
+- This exchange rate could be the price on the market or the price of the last sell
+- These exchange rates are updated once during the day
 
-Criterios de Aceptacion:
-- Se debe visualizar la lista de brokers y sus mercancias con sus cotizaciones
+Acceptance Criteria:
+- We must show the broker’s list and its merchandise with its exchange rates 
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
-- Broker Actor Plugin
-- Customer Actor Plugin
+- Broker Actor Plug-in
+- Customer Actor Plug-in
 - Crypto Broker Wallet
 - Broker Actor Network Service
 - Customer Actor Network Service
 
-#### Permitir a un Crypto Customer iniciar una nueva Negociacion
+#### Allow a Crypto Customer to begin a new Negotiation
 
-Criterios de Aceptacion:
-- Se muestra una nueva negociacion en el tab de Negociaciones Abiertas en la seccion Wating for Broker
-- Se muestra en el dispositivo del broker una nueva negociacion en el tab de Negociaciones Abiertas en la seccion Waiting for You
-- Se mostrara una notifiacion android en el dispositivo del otro actor indicando que se recibio una nueva negociacion
+Acceptance Criteria:
+- A new negotiation is shown in the open negotiations in the Broker’s waiting section
+- A new negotiation is shown in the broker’s device under the Open Negotiations tab in the section Waiting for You 
+- An Android notification will be displayed on the other agent’s device indicating that a new negotiation was received
 
-Como Probar:
-- Al seleccionar un item de la lista de brokers y sus cotizaciones se mostrará la pantalla para iniciar una negociacion
-- Se Podrá seleccionar y cambiar el valor de los siguientes items:
-  - Mercancia para pagar
-  - Tasa de cambio para pagar
-  - Cantidad a comprar
-  - Cantidad a pagar
-- Al modificar la tasa de cambio se recalcula la cantidad a pagar
-- Al modificar la cantidad a comprar se recalcula la cantidad a pagar y viceversa
-- Enviar la negociacion al Broker
-- La nueva negociacion a de aparecer en el tab de Negociaciones Abiertas de la Customer Wallet
-- El Broker ha de recibir la nueva negociacion en el home de la Broker Wallet y recibir una notificacion android
-- Se debe crea un nuevo registro en los plugins de Customer Broker Pruchase Negotiatiation y Customer Broker Sale Negotiatiation con la negociacion iniciada
+How to test it:
+- When selecting an item from the list of brokers and their exchange rate the screen will be shown to start a negotiation
+- You will be able to select and change the value of the following items:
+  - Merchandise to pay
+  - Exchange rate to pay
+  - Quantity to purchase
+  - Quantity to pay
+- When modifying the exchange rate it se recalculate the quantity to pay
+- When modifying the quantity to purchase, the quantity to pay recalculates and vice versa
+- Send the negotiation to the Broker
+- The new negotiation must appear in the open negotiations tab of the Customer Wallet
+- The Broker has to receive the new negotiation in the Broker Wallet home and also receive an android notification
+- We must create a new register in the Customer Broker Purchase Negotiation y Customer Broker Sale Negotiation plug-ins with a starting negotiation
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Broker New Negotiation Transaction Plugin
-- Negotiation Transmision Network Service
-- Customer Broker Purchase Negotiation Plugin
-- Customer Broker Sale Negotiation Plugin
+- Customer Broker New Negotiation Transaction Plug-in
+- Negotiation Transmission Network Service
+- Customer Broker Purchase Negotiation Plug-in
+- Customer Broker Sale Negotiation Plug-in
 
-#### Actualizar una negociacion
+#### Negotiation Update
 
-Criterios de Aceptacion:
-- Al ser editado un item de la lista, este cambiara a un color Verde
-- Al pulsar el boton Send la negociacion se mostrara en el tab de Negociaciones Abiertas
-  - En la Customer Reference Wallet se Mostrara con el estado Sending to Broker y Wating for Broker
-  - En la Broker Reference Wallet se Mostrara con el estado Sending to Customer y Wating for Customer
-- Se mostrara una notifiacion android en el dispositivo del otro actor indicando que se actualizo una negocaicion
+Acceptance Criteria:
+- Once an item is edited on the list, it will change to the color green
+- When hitting the send button the negotiation will be shown in the Open Negotiations tab
+  - The status Sending to Broker and Waiting for Broker will be shown in the Customer Reference Wallet
+  - The status Sending to Customer y Waiting for Customer will be shown in the Broker Reference Wallet
+- An android notification will display in the other actor’s device indicating that a negotiation has been updated
 
-Como Probar:
-- El Crypto Broker puede editar los siguientes items:
-  - Cantidad a vender
-  - Tasa de cambio
-  - Cantidad a recibir
-  - Modo de pago (Puede ser Cash on Hand, Cash Delivery, Bank o Crypto)
-  - Locacion donde recibir el pago si seleccionó Cash On Hand o Cash Delivery
-  - Cuenta bancaria donde recibir el pago si seleccionó Bank
-  - Fecha y Hora de pago
-  - Fecha y hora de entrega
-- El Crypto Customer puede editar los siguientes items:
-  - Cantidad a Comprar
-  - Tasa de cambio
-  - Cantidad a Pagar
-  - Modo de Entrega (Puede ser Cash on Hand, Cash Delivery, Bank o Crypto)
-  - Locacion donde recibir la mercancia si seleccionó Cash On Hand o Cash Delivery
-  - Cuenta Bancaria donde recibir la mercancia si seleccionó Bank
-  - Fecha y Hora de pago
-  - Fecha y hora de entrega
-- El broker puede visualizar el precio sugerido por la plataforma y el precio del mercado
-- El customer y el broker pueden agregar una nota en la negociacion. Esto es tecto libre
-- Las cantidades a comprar/vender asi como recibir/pagar se recalculan automaticamente
-- Si el broker o el customer modifica la negociacion, esta a de aparecer en tab de Negociaciones Abiertas de sus wallets, ser recibida por su contraparte en su tab de Negociaciones Abiertas y recibir una notifiacion android indicando que la negociacion se modificó
-- Se debe registrar en los plugins de Customer Broker Pruchase Negotiatiation y Customer Broker Sale Negotiatiation el cambio del estado
+How to test it:
+- The Crypto Broker is able to edit the following items:
+  - Quantity to sell
+  - Exchange rate
+  - Quantity to receive
+  - Type of payment (it can be Cash on Hand, Cash Delivery, Bank or Crypto)
+  - Location when receiving Cash On Hand or Cash Delivery payment
+  - Bank account when receiving a bank payment
+  - Time and date of payment
+  - Time and date of delivery
+- The Crypto Customer is able to edit the following items:
+  - Quantity to purchase
+  - Exchange rate
+  - Quantity to pay
+  - Type of payment (it can be Cash on Hand, Cash Delivery, Bank or Crypto)
+  - Location when receiving the merchandise if you selected Cash On Hand or Cash Delivery
+  - Bank account when receiving the merchandise if you selected Bank
+  - Time and date of payment
+  - Time and date of delivery
+- The broker is able to see the platform suggested price and the market price
+- The customer and the broker are able to add a note on the negotiation. It is free text
+- The quantities to purchase/sell as well as receiving/paying are automatically recalculated
+- If the broker or the customer modifies the negotiation, it must appear on their wallets Open Notifications tab, be received by its counterpart in their Open Negotiations tab and receive an android notification indicating that the notification was modified
+- It must be registered in the Customer Broker Purchase Negotiation y Customer Broker Sale Negotiation plug-ins the change of status
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Broker Update Negotiation Transaction Plugin
-- Negotiation Transmision Network Service
-- Customer Broker Purchase Negotiation Plugin
-- Customer Broker Sale Negotiation Plugin
+- Customer Broker Update Negotiation Transaction Plug-in
+- Negotiation Transmission Network Service
+- Customer Broker Purchase Negotiation Plug-in
+- Customer Broker Sale Negotiation Plug-in
 
-#### Cancelar una negociacion
+#### Cancelling a negotiation
 
-Criterios de Aceptacion:
-- La negociacion no se muestra en el tab de Negociones Abiertas de la Crypto Customer Reference Wallet y la Broker Reference Wallet
-- La negociacion se muestra ahora en la pantalla de Contract History de ambas wallets
-- En el detalle de esa negociacion cancelada se puede ver el motido de la cancelacion
+Acceptance criteria:
+- The negotiation does not show on the Crypto Customer Reference Wallet and Broker Reference Wallet open negotiation tab
+- The negotiation is now shown on the Contract History screen on both wallets
+- The reasons for cancellation are shown in the negotiation details 
 
-Como Probar:
-- Se debe mostrar un dialogo que permita al Customer o al Broker indicar la razon de la cancelacion
-- La negociacion debe desaparacer del tab de Negociaciones Abiertas en la wallet del actor que realizo la cancelacion
-- Se debe registrar en los plugins Customer Broker Pruchase Negotiatiation y Customer Broker Sale Negotiatiation el cambio del estado
-- La negociacion actualizada dese ser recibida por la contraparte y debe desaparecer del tab de Negociaciones Abiertas de su wallet y recibir una notificacion android indicando que se cancelo la negociacion
-- La negociacion Cancelada debe aparecer en la pantalla de Contract History de ambas wallets
+How to test it:
+- A dialogue must be shown allowing the Customer or the Broker to indicate the reason for cancellation
+- The negotiation must disappear from the Open Negotiations tab of the actor that made the cancellation
+- It must be registered in the Customer Broker Purchase Negotiation and Customer Broker Sale Negotiation plug-ins the change of status 
+- The updated negotiation must be received by its counterpart and must disappear from the Open Negotiations tab of his wallet and receive an android notification indication the cancellation of the negotiation
+- The cancelled negotiation must appear on the Contract History screen of both wallets
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Broker Update Negotiation Transaction Plugin
-- Negotiation Transmision Network Service
-- Customer Broker Purchase Negotiation Plugin
-- Customer Broker Sale Negotiation Plugin
+- Customer Broker Update Negotiation Transaction Plug-in
+- Negotiation Transmission Network Service
+- Customer Broker Purchase Negotiation Plug-in
+- Customer Broker Sale Negotiation Plug-in
 
-#### Cerrar una Negociacion y crear un Contrato de la misma
+#### Closing a negotiation and creating a contract
 
-Criterios de aceptacion:
-- La negociacion no se muestra en el tab de Negociones Abiertas de la Crypto Customer Reference Wallet y la Broker Reference Wallet
-- El contrato se muestra en el tab de Contratos Abertos de la Crypto Customer Reference Wallet y la Broker Reference Wallet
-- Se debe mostrar una notificacion android indicando que se a creado un nuevo contrato en el dispositivos de ambos actores
+Acceptance Criteria:
+- The negotiation does not show in the Crypto Customer Reference Wallet and the Broker Reference Wallet Open Negotiations tab
+- The contract is shown on the Crypto Customer Reference Wallet and the Broker Reference Wallet Open Contracts tab
+- An android notification must be shown indicating that a new contract has been created on the devices of both actors
 
-Como Probar:
-- Cuando el broker o el customer acepte todos los cambios de una negociacion, esta es enviada a su contraparte 
-- La negociacion se cierra, desapareciendo del tab de Negociaciones Abiertas y apareciendo un nuevo elemento en el tab de Contratos Abiertos, indicando que se creo un nuevo contrato ademas de recibir una notifiacion android
-- La contraparte recibe la negociacion y la cierra quitandola del tab de Negociaciones Abiertas y apareciendo un nuevo elemento en el tab de Contratos Abiertos, indicando que se creo un nuevo contrato ademas de recibir una notifiacion android
+How to test it:
+- When the broker or the customer accepts all the changes of a negotiation, it is then sent to its counterpart 
+- The negotiation closes, disappearing from the Open Negotiations tab and showing up a new element on the Open Contracts tab, indicating the creation of a new contract and receiving an android notification
+- The counterpart receives the negotiation and then closes it, deleting it from the Open Negotiations tab and showing up a new element on the Open Contracts tab, indicating the creation of a new contract and receiving an android notification
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Broker Close Negotiation Transaction Plugin
-- Open Contract Business Transaction Plugin
-- Customer Broker Purchase Negotiation Plugin
-- Customer Broker Sale Negotiation Plugin
-- Customer Broker Purchase Contract Plugin
-- Customer Broker Sale Contract Plugin
-- Negotiation Transmision Network Service
-- Transaction Transmision Network Service
+- Customer Broker Close Negotiation Transaction Plug-in
+- Open Contract Business Transaction Plug-in
+- Customer Broker Purchase Negotiation Plug-in
+- Customer Broker Sale Negotiation Plug-in
+- Customer Broker Purchase Contract Plug-in
+- Customer Broker Sale Contract Plug-in
+- Negotiation Transmission Network Service
+- Transaction Transmission Network Service
 - User Level Purchase Business Transaction
 - User Level Sale Business Transaction
 
-#### Procesar un contrato de Pago Offline y Mercancia Offline
+#### Process an Offline Payment and Offline merchandise contract
 
-La palabra *Offline* se refiere a que la moneda se maneja en una Cash Wallet o Bank Wallet
+The word *Offline* implies that the currency is managed by a Cash Wallet or Bank Wallet
 
-Criterios de Aceptacion:
-- Se puede visualizar el detalle del contrato con los 4 items:
+Acceptance Criteria:
+- The 4 detail items of the contract are shown:
   - Send Payment
   - Confirm Payment
   - Send Merchandise
   - Confirm Merchandise
-- Se puede acceder al detalle de la negociacion asociada al contrato
-- Se muestra el contrato en el tab de Contratos Abiertos en ambas Reference Wallets
-- Al actulizar el contrato se muestra una notificacion y se muestra el contrato en la seccion adecuada del tab
-  - Si el estado es Pending Payment o Confirm Merchandise se muestra en la seccion de esperando por el customer
-  - Si el estado es Confirm Payment o Pending Merchandise se muestra en la seccion de esperando por el broker
-- Se muestra una notifiacion android en el dispositivo de la contraparte cuando el customer o el broker actualice el contrato
-- Cuando el Broker confirma el pago:
-  - Debe aparecer aumentada la cantidad de mercancia en la Broker Wallet 
-  - Se debe mostrar un credito en la Cash wallet o la Bank wallet. Esto depende del modo de pago seleccionado en la negociacion
-- Cuando el broker indique que envió la mercancia, debe aparecer disminuida la cantidad de mercancia en la Broker Wallet
+- You can access the negotiation details associated to the contract
+- The contract is shown on the Open Contracts tab on both Reference Wallets
+- A notification is shown when updating the contract then the contract is shown on the tab section
+  - If the status reads Pending Payment or Confirm Merchandise it is shown on the waiting for customer section
+  - If the status reads Confirm Payment or Pending Merchandise it is shown on the waiting for broker section
+- An android notification is shown on the counterpart device when the customer or the broker updates the contract
+- When the broker confirms the payment:
+  - The merchandise amount grow must be shown on the Broker Wallet 
+  - A credit must be shown on the Cash wallet or the Bank wallet. Depending on the payment selected for the negotiation
+- When the broker indicates the merchandise was sent, the amount of merchandise must appear deducted on the Broker Wallet
 
-Como Probar:
-- El Crypto Cuistomer accede a la pantalla de Open Contract Details desde el tab de Contratos Abiertos de su Customer Reference Wallet
-- En la pantalla de Open Contract Details el Crypto Customer indica que envió al Crypto Broker que realizó el pago de una mercancia Offline
-- El Crypto Broker recibe la actulizacion del contrato indicando que se realizó el pago 
-- En la pantalla de Open Contract Details el Crypto Broker envia al customer la confirmacion del pago
-- Se realiza automaticamente un credito a la Broker Wallet y a la Cash Wallet o Bank Wallet dependiendo del modo de pago seleccionado en la negociacion
-- El Crypto Customer recibe la actulizacion del contrato indicando que el Crypto Broker confirmó el pago Offline
-- En la pantalla de Open Contract Details el Crypto Broker indica que envió al Crypto Customer la mercancia Offline
-- Se realiza automaticamente un debito a la Broker Wallet sobre la mercancia enviada
-- El Crypto Customer recibe la actulizacion del contrato indicando que el Crypto Broker realizó el envio de la mercancia Offline
-- En la pantalla de Open Contract Details el Crypto Customer envia al Crypto Broker la confirmacion de recepcion de la mercancia
+How to test it:
+- The Crypto Customer access the Open Contract Details screen from the Open Contracts tab in his Customer Reference Wallet
+- In the Open Contract Details screen the Crypto Customer indicates that he sent to the Crypto Broker that made an Offline merchandise payment
+- The Crypto Broker receives an update of the contract indicating the payment was done 
+- In the Open Contract Details screen the Crypto Broker sends a payment confirmation to the customer
+- A credit is automatically given to the Broker Wallet and Cash Wallet or Bank Wallet depending on the payment method selected in the negotiation
+- The Crypto Customer receives an update of the contract indicating that the Crypto Broker confirmed the Offline payment
+- In the Open Contract Details screen the Crypto Broker indicates that the Offline merchandise was sent to the Crypto Customer
+- A debit is automatically done to the Broker Wallet for the merchandise sent
+- The Crypto Customer receives an update of the contract indicating that the Crypto Broker sent the Offline merchandise
+- In the Open Contract Details screen the Crypto Customer sends the Crypto Broker the confirmation indicating the merchandise was received
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Offline Payment Business Transaction Plugin
-- Broker Ack Offline Payment Business Transaction Plugin
-- Broker Submit Offline Merchandise Business Transaction Plugin
-- Customer Ack Offline Merchandise Business Transaction Plugin
-- Customer Broker Sale Contract Plugin
-- Customer Broker Purchase Contract Plugin
-- Transaction Transmision Network Service
-- Plataforma CSH y Plataforma BNK
+- Customer Offline Payment Business Transaction Plug-in
+- Broker Ack Offline Payment Business Transaction Plug-in
+- Broker Submit Offline Merchandise Business Transaction Plug-in
+- Customer Ack Offline Merchandise Business Transaction Plug-in
+- Customer Broker Sale Contract Plug-in
+- Customer Broker Purchase Contract Plug-in
+- Transaction Transmission Network Service
+- CSH and BNK platforms
 - User Level Purchase Business Transaction
 - User Level Sale Business Transaction
 
-#### Procesar un contrato de Pago Online y Mercancia Offline
+#### Process an Online payment and Offline merchandise contract
 
-La palabra *Online* se refiere a que la moneda cuyo envio y recepcion se maneja de forma automatica desde Fermat, no hace falta intervencion del usuario para realizar el envio y confirmar la recepcion. Actualmente la moneda soportada es el Bitcoin por medio de una Bitcoin Wallet 
+The word *Online* refers to the currency automatic sending and receiving managed from Fermat, no need for the user to intervene in order to send and confirm. Currently the supported currency is Bitcoin through a Bitcoin Wallet 
 
-Criterios de Aceptacion:
-- Se puede visualizar el detalle del contrato con los 4 items:
+Acceptance Criteria:
+- The 4 detail items of the contract are shown:
   - Send Payment
   - Confirm Payment
   - Send Merchandise
   - Confirm Merchandise
-- Se puede acceder al detalle de la negociacion asociada al contrato
-- Se muestra el contrato en el tab de Contratos Abiertos en ambas Reference Wallets
-- Al actulizar el contrato se muestra una notificacion y se muestra el contrato en la seccion adecuada del tab
-  - Si el estado es Pending Payment o Confirm Merchandise se muestra en la seccion de esperando por el customer
-  - Si el estado es Confirm Payment o Pending Merchandise se muestra en la seccion de esperando por el broker
-- Se muestra una notifiacion android en el dispositivo de la contraparte cuando el customer o el broker actualice el contrato
-- Cuando el Broker confirma el pago:
-  - Debe aparecer aumentada la cantidad de mercancia en la Broker Wallet 
-  - Se debe mostrar un credito en su Bitcoin Wallet
-- Cuando el broker indique que envió la mercancia, debe aparecer disminuida la cantidad de mercancia en la Broker Wallet
+- You can access the details of the negotiation associated to the contract
+- The contract is shown on the Open Contracts tab of both Reference Wallets
+- When updating the contract a notification is shown and the contract is shown on the tab section
+  - If the status reads Pending Payment or Confirm Merchandise it is shown on the waiting for customer section
+  - If the status reads Confirm Payment or Pending Merchandise it is shown on the waiting for broker section
+- An android notification is shown on the counterpart device when the customer or the broker updates the contract
+- When the Broker confirms the payment:
+  - The merchandise amount grow must be shown on the Broker Wallet 
+  - A credit must be shown on its Bitcoin Wallet
+- When the broker indicates the merchandise was sent, the amount of merchandise must appear deducted on the Broker Wallet
 
-Como Probar:
-- El Crypto Customer accede a la pantalla de Open Contract Details desde el tab de Contratos Abiertos de su Customer Reference Wallet
-- Indica que desea enviar la mercancia Online al Crypto Broker
-- Se realiza automaticamente un debito a la Bitcoin Wallet del Customer
-- El Crypto Broker recibe la actualizacion del contrato indicando que se realizó el pago
-- La plataforma CBP haciendo uso de la plataforma CCP monitorea la recepcion del pago y envia al Customer el contrato actualizado con la confirmacion del pago
-- Se realiza automaticamente un credito a la Bitcoin Wallet y a la Broker Wallet
-- En la pantalla de Open Contract Details el Crypto Broker indica que envió al Crypto Customer la mercancia Offline
-- Se realiza automaticamente un debito a la Broker Wallet sobre la mercancia enviada
-- El Crypto Customer recibe la actulizacion del contrato indicando que el Crypto Broker realizó el envio de la mercancia Offline
-- En la pantalla de Open Contract Details el Crypto Customer envia al Crypto Broker la confirmacion de recepcion de la mercancia
+How to test it:
+- The Crypto Customer access the Open Contract Details screen from the Open Contracts tab of his Customer Reference Wallet
+- Indicates he wants to send the Online merchandise to the Crypto Broker
+- A debit is automatically done to the Customer’s Bitcoin Wallet
+- The Crypto Broker receives an update of the contract indicating the payment was done
+- The CBP platform using the CCP platform then monitors the reception of the payment and then sends to the Customer the updated contract along with the payment confirmation
+- An automatic credit is given to the Bitcoin and Broker Wallet
+- In the Open Contract Details screen the Crypto Broker indicates that he sent the Offline merchandise to the Crypto Customer
+- An automatic debit is done to the Broker Wallet for the merchandise sent
+- The Crypto Customer receives an update of the contract indicating that the Crypto Broker sent the Offline merchandise
+- In the Open Contract Details screen the Crypto Customer sends a confirmation that the merchandise was received to the Crypto Broker
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Offline Payment Business Transaction Plugin
-- Broker Ack Offline Payment Business Transaction Plugin
-- Broker Submit Offline Merchandise Business Transaction Plugin
-- Customer Ack Offline Merchandise Business Transaction Plugin
-- Customer Broker Sale Contract Plugin
-- Customer Broker Purchase Contract Plugin
-- Transaction Transmision Network Service
-- Plataforma CSH, Plataforma BNK y Plataforma CCP
+- Customer Offline Payment Business Transaction Plug-in
+- Broker Ack Offline Payment Business Transaction Plug-in
+- Broker Submit Offline Merchandise Business Transaction Plug-in
+- Customer Ack Offline Merchandise Business Transaction Plug-in
+- Customer Broker Sale Contract Plug-in
+- Customer Broker Purchase Contract Plug-in
+- Transaction Transmission Network Service
+- CSH, BNK and CCP platforms
 - User Level Purchase Business Transaction
 - User Level Sale Business Transaction
 
-#### Procesar un contrato de Pago Offline y Mercancia Online
+#### Process an Offline payment and Online Merchandise contract
 
-Criterios de Aceptacion:
-- Se puede visualizar el detalle del contrato con los 4 items:
+Acceptance Criteria:
+- The 4 detail items of the contract are shown:
   - Send Payment
   - Confirm Payment
   - Send Merchandise
   - Confirm Merchandise
-- Se puede acceder al detalle de la negociacion asociada al contrato
-- Se muestra el contrato en el tab de Contratos Abiertos en ambas Reference Wallets
-- Al actulizar el contrato se muestra una notificacion y se muestra el contrato en la seccion adecuada del tab
-  - Si el estado es Pending Payment o Confirm Merchandise se muestra en la seccion de esperando por el customer
-  - Si el estado es Confirm Payment o Pending Merchandise se muestra en la seccion de esperando por el broker
-- Se muestra una notifiacion android en el dispositivo de la contraparte cuando el customer o el broker actualice el contrato
-- Cuando el Broker confirma el pago:
-  - Debe aparecer aumentada la cantidad de mercancia en la Broker Wallet 
-  - Se debe mostrar un credito en su Bitcoin Wallet
-- Cuando el broker indique que envió la mercancia, debe aparecer disminuida la cantidad de mercancia en la Broker Wallet
+- You can access the details of the negotiation associated to the contract
+- The contract is shown on the Open Contracts tab of both Reference Wallets
+- When updating the contract a notification is shown and the contract is shown on the tab section
+  - If the status reads Pending Payment or Confirm Merchandise it is shown on the waiting for customer section
+  - If the status reads Confirm Payment or Pending Merchandise it is shown on the waiting for broker section
+- An android notification is shown on the counterpart device when the customer or the broker updates the contract
+- When the Broker confirms the payment:
+  - The merchandise amount grow must be shown on the Broker Wallet
+  - A credit must be shown on its Bitcoin Wallet
+- When the broker indicates the merchandise was sent, the amount of merchandise must appear deducted on the Broker Wallet
 
-Como Probar:
-- El Crypto Cuistomer accede a la pantalla de Open Contract Details desde el tab de Contratos Abiertos de su Customer Reference Wallet
-- Indica que envió el pago de una mercancia Offline al Crypto Broker
-- El Crypto Broker recibe la actulizacion del contrato indicando que se realizó el pago 
-- En la pantalla de Open Contract Details el Crypto Broker envia al Customer la confirmacion del pago
-- Se realiza automaticamente un credito a la Broker Wallet y a la Cash Wallet o Bank Wallet dependiendo del modo de pago seleccionado en la negociacion
-- El Crypto Customer recibe la actulizacion del contrato indicando que el Crypto Broker confirmó el pago Offline
-- En la pantalla de Open Contract Details el Crypto Broker indica que desea enviar la mercancia Online al Crypto Customer
-- El Crypto Customer recibe la actulizacion del contrato indicando que se realizó envió la mercancia 
-- Se realiza automaticamente un debito a la Broker Wallet y la Bitcoin Wallet del Broker
-- La plataforma CBP haciendo uso de la plataforma CCP monitorea la recepcion de la mercancia y envia al Broker el contrato actualizado con la confirmacion de recepcion de la mercancia en el dispositivo del Customer
-- Se realiza automaticamente un credito a la Bitcoin Wallet del Customer
+How to test it:
+- The Crypto Customer access the Open Contract Details screen from the Open Contracts tab of his Customer Reference Wallet
+- Indicates he wants to send the Online merchandise to the Crypto Broker
+- The Crypto Broker receives an update of the contract indicating the payment was done
+- In the Open Contract Details screen the Crypto Broker sends a payment confirmation to the Customer
+- An automatic credit is given to the Broker Wallet and the Cash Wallet or Bank Wallet depending on the payment method selected in the negotiation
+- The Crypto Customer receives an update of the contract indicating that the Crypto Broker confirmed the Offline payment
+- In the Open Contract Details screen the Crypto Broker indicates that he wants to send the Online merchandise to the Crypto Customer
+- The Crypto Customer receives an update of the contract indicating that the merchandise was sent
+- A debit is automatically done to the Broker Wallet and the Broker’s Bitcoin Wallet 
+- The CBP platform using the CCP platform then monitors the reception of the merchandise and then sends to the Broker the updated contract along with the merchandise receiving confirmation in the Customer’s device
+- A credit is automatically given to the Customer’s Bitcoin Wallet
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Customer Offline Payment Business Transaction Plugin
-- Broker Ack Offline Payment Business Transaction Plugin
-- Broker Submit Offline Merchandise Business Transaction Plugin
-- Customer Ack Offline Merchandise Business Transaction Plugin
-- Customer Broker Sale Contract Plugin
-- Customer Broker Purchase Contract Plugin
-- Transaction Transmision Network Service
-- Plataforma CSH, Plataforma BNK y Plataforma CCP
+- Customer Offline Payment Business Transaction Plug-in
+- Broker Ack Offline Payment Business Transaction Plug-in
+- Broker Submit Offline Merchandise Business Transaction Plug-in
+- Customer Ack Offline Merchandise Business Transaction Plug-in
+- Customer Broker Sale Contract Plug-in
+- Customer Broker Purchase Contract Plug-in
+- Transaction Transmission Network Service
+- CSH, BNK and CCP platforms
 - User Level Purchase Business Transaction
 - User Level Sale Business Transaction
 
-#### Cerrar Contrato
+#### Close a Contract
 
-Criterios de Aceptacion:
-- El contrato no se muestra en el tab de Contratos Abiertos de la Customer Reference Wallet y la Broker Reference Wallet
-- Se recibe una notificacion android de que el Contrato se a Completado
-- El contrato se muestra en la pantalla de Contract History de ambas Reference Wallets con estado completado
-- El detalle del contrato muestra informacion de la misma
+Acceptance Criteria:
+- The contract does not show on the Customer Reference Wallet and Broker Reference Wallet Open Contracts tab
+- An android notification is received that the Contract was completed
+- The contract is shown on the Contract History screen of both Reference Wallets with a complete status
+- The contract details show information of the contract 
 
-Como probar:
-- Cuando se confirme el envio de la mercancia por parte del customer automaticamente el sistema cierra el contrato colocandolo como completado
-- Este ya no se muestra en el en el tab de Contratos Abiertos y recibe una notificacion android de que el Contrato se a Completado
-- El contrato aparece completado podra ser visible en la pantalla de COntract History de cada Reference Wallet
-- Al seleccionar el contrato en esa pantalla se accedera al detalle donde se mostrara la siguiente informacion
-  - Cantidad Comprada o Vendida
-  - Precio
-  - Forma de Pago
-  - Fecha de completacion del contrato
-  - Acceso al detalle de la negociacion asociada
+How to test it:
+- When the customer confirms the merchandise sending the system automatically closes the contract placing it as completed
+- It will not be shown on the Open Contracts tab and receives an android notification that the contract was completed
+- The completed contract is visible in the Contract History screen of each of the Reference Wallets
+- When selecting the contract on that screen you will have access to the details where the following information is shown
+  - Quantity purchased or sold
+  - Price
+  - Payment method
+  - Contract completion date
+  - Access to the associated negotiation details
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Customer Reference Wallet
 - Crypto Broker Reference Wallet
-- Close Contract Business Transaction Plugin
-- Customer Broker Sale Contract Plugin
-- Customer Broker Purchase Contract Plugin
-- Transaction Transmision Network Service
+- Close Contract Business Transaction Plug-in
+- Customer Broker Sale Contract Plug-in
+- Customer Broker Purchase Contract Plug-in
+- Transaction Transmission Network Service
 - User Level Purchase Business Transaction
 - User Level Sale Business Transaction
 
-#### Extraccion de ganancias
+#### Extraction of profits
 
-Criterios de Aceptacion
-- Visualizar las ganancias en la pantalla de Earnings en la Broker Reference Wallet: Diario, Semanal, Mensual y Anual
-- Visualizar el credito de las ganancias obtenidas durante el proceso de matching en las wallets de Cash, Bank o Bitcoin, dependiendo de los pares de mercancia seleccionados y las wallets asociadas a esos pares
+Acceptance Criteria:
+- View profits in the Earnings screen of the Broker Reference Wallet: Daily, Weekly, Monthly and Annually 
+- View the profit credit obtained during the matching process in the Cash, Bank or Bitcoin wallets, depending of the selected merchandise pairs and the wallets associated to those pairs
 
-Componentes Involucrados:
+Components Involved:
 - Crypto Broker Reference Wallet
-- Matching Engine Middleware Plugin
-- Crypto Broker Wallet Plugin
-- Plataforma CSH, BNK y CCP
+- Matching Engine Middleware Plug-in
+- Crypto Broker Wallet Plug-in
+- CSH, BNK and CCP platforms
 
 
 ### Current Development in Progress
 
-Para el inicio de este proyecto se cuenta con la implementacion de la plataforma CCP que permite el envio y recepcion de bitcoins a traves de red Fermat. Utilizaremos las funcionaldades y componentes desarrollados para manejar negociaciones donde se desee comprar o vender Bitcoins
+Starting this project we are counting on the implementation of the CCP platform that allows sending and receiving Bitcoins through the Fermat network. We will use the developed functionalities and components to handle negotiations of purchasing or selling Bitcoins
 
 
 ### Related Projects To Develop
 
-Para el desarrollo de la funcionalidad con la que contará la plataforma CBP es necesaria la creacion de varios Side Projects los cuales se especifican a continuacion indicando el alcance de los mismos:
+The creation of various Side Projects is necessary for the functionality development the CBP platform will use they are specified down below indicating their reach:
 
 #### CSH Platform
 
-Esta plataforma permite la administracion de dinero FIAT (Dolar, Bolivar, Peso Argentino, Euro, etc) que se tiene en efectivo, y permite a un Crypto Broker vender mercancia recibiendo el pago dinero en efectivo
+This platform allows managing FIAT money kept in cash (Dollar, Bolivar, Argentinean Peso, Euro, etc), and it allows a Crypto Broker to sell merchandise and receiving payments in cash
 
-Alcance:
-- Configurar la wallet asociando una moneda a ella
-- Hacer creditos
-- Hacer debitos
-- Editar transacciones de credito o debito que esten en proceso
-- Cancelar transacciones de credito o debito mientras esten en proceso 
-- Llevar el balance book y available del dinero en efectivo
-- Mostrar el historial de transacciones hechas a la wallet
-- Mostrar detalles de cada transaccion
+Reach:
+- Configure the wallet by associating a currency to it
+- Give credits
+- Make debits
+- Edit credit or debit transactions while in process
+- Cancel credit or debit transactions while in process 
+- Manage the cash money balance book and available
+- Show the transactions history made in the wallet
+- Show details of every transaction
 
-Criterios de Aceptacion:
-- En el wizard inicial, se puede configurar una moneda para llevar el balance del dinero en cash
-- Se muestran los balances Available y Book de la wallet (mostrando el book solo cuando los balances sean distintos)
-- Realizar una transaccion de Credito
-- Editar la informacion de la transaccion de Credito mientras este en proceso
-- Cancelar la transaccion de Credito mientras este en proceso
-- Realizar una transaccion de Debito
-- Editar la informacion de la transaccion de Debito mientras este en proceso
-- Cancelar la transaccion de Debito mientras este en proceso
-- Ver la informacion de cualquier transaccion realizada
+Acceptance Criteria:
+- In the initial wizard, you can configure a currency to manage the balance of the cash money
+- The Available y Book balances of the wallet are shown (showing the book only when there are different balances)
+- Make a credit transaction
+- Edit the credit transaction information while in process
+- Cancel credit transaction while in process
+- Make a debit transaction
+- Edit the debit transaction information while in process
+- Cancel debit transaction while in process
+- View the information of any transaction made
 
 #### BNK Platform
 
-Esta plataforma permite la administracion de dinero FIAT (Dolar, Bolivar, Peso Argentino, Euro, etc) que se tiene almacenada en un banco, y permite a un Crypto Broker vender mercancia recibiendo el pago dinero a travez de deposito o transferencia bancaria.
+This platform allows managing FIAT money kept in a bank (Dollar, Bolivar, Argentinean Peso, Euro, etc), and it allows a Crypto Broker to sell merchandise receiving the payment through deposit or bank transference.
 
-Alcance:
-- Configurar la wallet indicando nombre de un banco
-- Agregar cuentas bancarias en diferentes monedas
-- Hacer creditos a las cuentas bancarias
-- Hacer debitos a las cuentas bancarias
-- Editar transacciones de credito o debito que esten en proceso
-- Cancelar transacciones de credito o debito mientras esten en proceso 
-- Llevar el balance book y available del dinero en cada cuenta bancaria
-- Mostrar el historial de transacciones hechas sobre cada cuenta
-- Mostrar detalles de cada transaccion
-- No va a estar conectada a la API de ningun banco, eso solo para uso administrativo
+Reach:
+- Configure the wallet indicating the name of a bank
+- Add bank accounts of different currencies
+- Give credits to bank accounts
+- Make debits to bank accounts
+- Edit credit or debit transactions while in process
+- Cancel credit or debit transactions while in process
+- Manage the cash money balance book and available in each bank account
+- Show the transactions history made in each account
+- Show details of every transaction
+- It won’t be connected to the API of any bank, only for administrative use
 
-Criterios de Aceptacion:
-- En el wizard inicial, se puede ingresar un texto que represente el nombre de un banco
-- Se puede agregar una o mas cuentas bancarias y cada una puede tener asociada una moneda diferente
-- Se muestran los balances Availabe y Book de cada cuenta (mostrando el book solo cuando los balances sean distintos)
-- Mostrar historial de transacciones.
-- Realizar una transaccion de Credito en cualquiera de las cuentas
-- Editar la informacion de la transaccion de Credito mientras este en proceso
-- Cancelar la transaccion de Credito mientras este en proceso
-- Realizar una transaccion de Debito en cualquiera de las cuentas
-- Editar la informacion de la transaccion de Debito mientras este en proceso
-- Cancelar la transaccion de Debito mientras este en proceso
-- Ver la informacion de cualquier transaccion realizada
+Acceptance Criteria:
+- In the initial wizard, you can insert a text representing the name of a bank
+- You can add one or more bank accounts and each could have a different associated currency
+- The Available y Book balances of the wallet are shown (showing the book only when there are different balances)
+- Show the transactions history.
+- Make a credit transaction in any of the accounts
+- Edit the credit transaction information while in process
+- Cancel credit transaction while in process
+- Make a debit transaction in any of the accounts
+- Edit the debit transaction information while in process
+- Cancel debit transaction while in process
+- View the information of any transaction made
 
 #### CER Super Layer
 
-Esta super capa se creo con la finalidad de poder ofrecer a las diferentes plataformas que lo requieran proveedores de tasas de cambio. En el caso de la plataforma CBP se usa para que el Crypto Broker y el Crypto Customer tengan un precio de referencia con el cual comprar y vender
+This super layer was created with the finality of being able to offer exchange rates to different platforms that might require them. In the case of the CBP platform it’s used so that the Crypto Broker and Crypto Customer have a reference price to have for purchasing or selling
 
-Alcance:
-- Contiene providers de exchangeRates para monedas fiat y crypto
-- Retorna una lista de todos los Providers que contiene el CER
-- Filtra providers segun su public key
-- Filtra Providers segun un par de monedas dado
-- De cada provider se obtiene 
-  - Una lista de pares de monedas soportadas
-  - El exchangeRate actual
-  - El exchangeRate para una fecha dada (de ser soportado por el provider)
-  - ExchangeRates diarios para un rango de fechas (de ser soportado por el provider)
-  - Una lista de todos los exchangeRates alguna vez solicitados al plugin
-- Providers inicialmente soportados:
-  - Bitcoin Venezuela (Monedas soportadas: Bitcoin, Litecoin, Dolar Americano, Euro, Bolivar, Peso Argentino)
-  - Bitfinex (Monedas soportadas: Bitcoin, Litecoin, Ethereum, Dolar Americano)
-  - Bter (Monedas soportadas: Bitcoin, Litecoin, Ethereum, Yuan, Dolar Americano)
-  - Dolar Today (Dolar Americano, Bolivares)
-  - El Cronista (Dolar Americano, Peso Argentino)
-  - La Nacion (Dolar Americano, Peso Argentino)
-  - European Central Bank (Dolar Australiano, Real Brasileño, Libra Esterlina, Dolar Canadiense, Yuan, Euro, Yen, Peso Mexicano, Dolar Neozelandes, Franco Suizo, Dolar Americano)
-  - Yahoo (Todos las monedas FIAT)
+Reach:
+- Has an exchange rate provider for fiat and crypto currencies
+- Returns a list of all the providers the CER has
+- Filters providers according to your public key
+- Filters providers according to the type of currency
+- From each provider you receive 
+  - A list of supported pairs of currencies 
+  - The current exchange rate
+  - The exchange rate for a specific date (if it’s supported by the provider)
+  - Daily exchange rates for a range of dates (if it’s supported by the provider)
+  - A list of all the exchange rates ever requested to the plug-in
+- Initial supported providers:
+  - Bitcoin Venezuela (Supported currencies: Bitcoin, Litecoin, American Dollar, Euro, Bolivar, Argentinean Peso)
+  - Bitfinex (Supported currencies: Bitcoin, Litecoin, Ethereum, American Dollar)
+  - Bter (Supported currencies: Bitcoin, Litecoin, Ethereum, Yuan, American Dollar)
+  - Dollar Today (American Dollar, Bolivar)
+  - El Cronista (American Dollar, Argentinean Peso)
+  - La Nacion (American Dollar, Argentinean Peso)
+  - European Central Bank (Australian Dollar, Brazilian Real, British Pounds, Canadian Dollar, Yuan, Euro, Yen, Mexican Peso, New Zealand Dollar, Swiss Franc, American Dollar)
+  - Yahoo (All FIAT currency)
 
-Criterios de Aceptacion:
- - Implementacion de la funcionalidad e integracion de la capa CER con la plataforma CBP
+Acceptance Criteria:
+ - Implementation of the functionality and integration of the CER layer with the CBP platform
 
 
 ## Timeline
 
-Basado en la carga de trabajo y los recursos disponibles, la fecha del Demo Day a quedado fijada para el **31 de Marzo 2016**
+Based on the workload and available resources, the date for the Demo has been scheduled for **March 31st 2016**
 
 
 ### Evaluation
 
-Para considerar este bounty exitoso se debe cumplir los Criterios de Aceptacion de los flujos expuestos anteriormente.
+To consider this bounty successful the Acceptance Criteria previously detailed must be met.
 
-Durante el Demo Day se cumplieron los criterios de aceptación para los diferentes features descritos arriba. Al finalizar la presentación de Demo se llegaron a las siguientes concluciones:
+During the Demo Day the Acceptance Criteria for the different features described above were met. When the Demo presentation was finished we got to these conclusions:
 
-- Esta version del proyecto pasa a la fase de Beta Testing
-- Los projectos CSH, BNK y CER sera tratados como proyectos indenpendientes y cada uno tendra su propia fase Beta Testing
-- La fecha de inicio del Beta Testing para CBP, CSH, BNK, y CER estan por ser determinadas
+- This project version passes to the Beta Testing phase
+- The CSH, BNK and CER projects will be treated as independent projects and they will each have their own Beta Testing
+- The date for beginning the CBP, CSH, BNK, and CER Beta Testing are still pending
 
 
 ### Distribution by Contributor
@@ -551,25 +551,26 @@ Durante el Demo Day se cumplieron los criterios de aceptación para los diferent
 
 ### Distribution by Features 
 
-Cada caracteristica expuesta mas arriba tiene un porcentaje que representa parte del bounty. A continuacion se indican dichos porcentajes:
+Each characteristic exposed above has a percentage that represents part of the bounty. Those percentages are shown here:
 
 |Features                                                      | % | 
 |--------------------------------------------------------------|:----:|
-|Creacion de identidades para Crypto Brokers                   | 2% |
-|Creacion de identidades para Crypto Customer                  | 2% |
-|Configuracion Previa (Wizard) de la Broker Reference Wallet   | 3% |
-|Configuracion Previa (Wizard) de la Customer Reference Wallet | 3% |
-|Configurar la Broker Wallet                                   | 3% |
-|Configurar la Customer Wallet                                 | 3% |
-|Conectar un Crypto Customer con un Crypto Broker              | 5% |
-|Obtener cotizaciones de un Broker                             | 5% |
-|Permitir a un Crypto Customer iniciar una nueva Negociacion   | 5% |
-|Actualizar una negociacion                                    | 6% |
-|Cancelar una negociacion                                      | 4% |
-|Cerrar una Negociacion y crear un Contrato                    | 5% |
-|Procesar un contrato de Pago Offline y Mercancia Offline      | 5% |
-|Cerrar Contrato                                               | 5% |
-|CSH Platform                                                  | 5% |
-|BNK Platform                                                  | 5% |
-|CER Super Layer                                               | 4% |
-|**Total**                                                    | **70% of 100%** |
+|Creation of identities for Crypto Brokers                        | 2% |
+|Creation of identities for Crypto Customer                       | 2% |
+|Previous configuration (Wizard) of the Broker Reference Wallet   | 3% |
+|Previous configuration (Wizard) of the Customer Reference Wallet | 3% |
+|Configure the Broker Wallet                                      | 3% |
+|Configure the Customer Wallet                                    | 3% |
+|Connect a Crypto Customer with a Crypto Broker                   | 5% |
+|Obtain quotes from a Broker                                      | 5% |
+|Allow a Crypto Customer to begin a new negotiation               | 5% |
+|Update a negotiation                                             | 6% |
+|Cancelar una negociacion                                         | 4% |
+|Close a negotiation and create a contract                        | 5% |
+|Process an Offline Payment and Online Merchandise contract       | 5% |
+|Close Contract                                                   | 5% |
+|CSH Platform                                                     | 5% |
+|BNK Platform                                                     | 5% |
+|CER Super Layer                                                  | 4% |
+|**Total**                                                      | **70% of 100%** |
+
