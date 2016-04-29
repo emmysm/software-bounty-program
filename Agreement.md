@@ -83,7 +83,7 @@ Only fill the underlined spaces that apply.
 
 - **GUI/UX design bounty:** This part of the project will be __% of the total bounty. 
 
-7- The team agrees that the implementation has two stages: functionality and beta testing.
+7- The team agrees that the implementation project has two stages: functionality and beta testing.
 
 8- The team understands and accepts that the functionality will be considered done when all the features described in the scope of this agreement are completed and tested in an alpha stage.
 
@@ -91,7 +91,7 @@ Only fill the underlined spaces that apply.
 
 10- Component architecture and workflows are created in the Analytics System and the Interfaces in the API library of the platform involved.
 
-11- The team understands and accepts that implementation will be evaluated by the @bounty-program-team and will include functionality test and review of Fermat’s technical guidelines compliance. 
+11- The team understands and accepts that implementation will be evaluated by the @bounty-program-team and will include GUI/UX design checking, functionality test and review of Fermat’s technical guidelines compliance. 
 
 12- The team understands and accepts that there is only one free review for functionality and one for Fermat’s technical guidelines compliance. The following reviews will cost the team 25% of the related bounty each in case the first one wasn’t approved.
 
@@ -109,7 +109,11 @@ Only fill the underlined spaces that apply.
 
 14- The team understands and accepts that beta testing will be conducted by the @beta-testing-team.
 
-15- The team understands and accepts that criteria to pass beta testing are: no bug issues on beta testing due date or in a period of three (3) consecutive calendar days before the due date.
+15- The team understands and accepts that criteria to pass beta testing are:
+
+- No bug issues on beta testing due date,
+- Or no bug issues in a period of three (3) consecutive calendar days before the due date,
+- Or no answer from @beta-testing-team about solved bugs for (6) consecutive days before the due date. 
 
 16- The team agrees to complete the beta testing on the following conditions:
 
@@ -119,7 +123,7 @@ Only fill the underlined spaces that apply.
  
 - **Beta testing margin:** No penalties are applied ___ calendar days after the beta testing due date.
  
-- **Beta testing penalty:** __% of the bounty for each calendar day that elapses after the due date without formal passing through beta testing. The way to pass in this case is to have no bugs for (3) consecutive days. This penalty will be paid by the development team from the implementation bounty to the beta testing team.
+- **Beta testing penalty:** __% of the bounty for each calendar day that elapses after the due date without formal passing through beta testing. The way to pass in this case is to have no bugs for (3) consecutive days. This penalty will be paid by the development team from the implementation bounty previously awarded or its savings to the beta testing team. If savings are not enough it will be deducted from their cash salaries.
  
 - **Beta testing bounty:** The beta testing bounty will be a fixed 30% of the total bounty. It could be awarded to the development team if it passes the beta testing on time or by @beta-testing-team if they fails. It implies that development team will not get this bounty unless it succeeds in the beta testing process.
 
