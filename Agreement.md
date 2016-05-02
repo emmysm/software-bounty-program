@@ -97,13 +97,13 @@ Only fill the underlined spaces that apply.
 
 13- The team agrees to complete the implementation on the following conditions: 
 
-- **Implementation due date:** All the features will be finished before __ __ __. 
+- **Implementation due date:** All the features will be finished before __ __ __. If on this date the development team does not deliver the agreed functionality, it will lose the implementation bounty.
  
-- **Implementation collateral deposit:** The team agrees to deposit the amount of ________ tokens, as a collateral to be lost if this part project is not approved before the due date.
+- **Implementation collateral deposit:** The team agrees to deposit the amount of ________ tokensin favor of the @bounty-program-team, as a collateral to be lost if this part project is not approved before the due date.
  
-- **Implementation margin:** No penalties are applied ___ calendar days after implementation due date.
+- **Implementation margin:** No more penalties are applied ___ calendar days after implementation due date.
  
-- **Implementation penalty:** __% of the implementation bounty for each calendar day that elapses after the due date without formal acceptance from the @bounty-program-team.    
+- **Implementation penalty:** __% of the implementation bounty for each calendar day that elapses after the implementation margin without formal acceptance from the @bounty-program-team. This penalty will be paid by the development team from its savings to the @bounty-program-team. If savings are not enough it will be deducted from their cash salaries.
  
 - **Implementation bounty:** The functionality will be __% of the total bounty. This bounty will be awarded to the development team when the @bounty-program-team considers that the functionality delivered is done.
 
@@ -117,13 +117,13 @@ Only fill the underlined spaces that apply.
 
 16- The team agrees to complete the beta testing on the following conditions:
 
-- **Beta testing due date:** Beta testing will be passed before __ __ __. After this date, the beta testing bounty will be awarded to the @beta-testing-team. 
+- **Beta testing due date:** Beta testing will be passed before __ __ __. If on this date the development team does not pass the beta testing, it will lose the beta testing bounty, which will be automatically awarded to the @beta-testing-team.
  
-- **Beta testing collateral deposit:** The team agrees to deposit the amount of ________ tokens, as a collateral to be lost if this part of the project is not approved before the due date.
+- **Beta testing collateral deposit:** The team agrees to deposit the amount of ________ tokens in favor of the @bounty-program-team, as a collateral to be lost if this part of the project is not approved before the due date.
  
-- **Beta testing margin:** No penalties are applied ___ calendar days after the beta testing due date.
+- **Beta testing margin:** No more penalties are applied ___ calendar days after the beta testing due date.
  
-- **Beta testing penalty:** __% of the bounty for each calendar day that elapses after the due date without formal passing through beta testing. The way to pass in this case is to have no bugs for (3) consecutive days. This penalty will be paid by the development team from the implementation bounty previously awarded or its savings to the beta testing team. If savings are not enough it will be deducted from their cash salaries.
+- **Beta testing penalty:** __% of the bounty for each calendar day that elapses after the beta testing margin without formal passing through beta testing. This penalty will be paid by the development team from the implementation bounty previously awarded or its savings to the @beta-testing-team. If savings are not enough it will be deducted from their cash salaries.
  
 - **Beta testing bounty:** The beta testing bounty will be a fixed 30% of the total bounty. It could be awarded to the development team if it passes the beta testing on time or by @beta-testing-team if they fails. It implies that development team will not get this bounty unless it succeeds in the beta testing process.
 
